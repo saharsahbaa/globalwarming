@@ -3,6 +3,7 @@
   <head>
     <titte> This my First page! </tittle>
     <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src = "d3-transform.js"></script>
    </head>
    <body>
      <p> I want try to learn working with github! </p>
@@ -14,8 +15,12 @@
                     .append("svg")
                     .attr("width", width)
                     .attr("height", height);
+       var my_transform = d3transform()
+                            .translate([80, 80])
+                            .rotate(30);
        var group = svg.append("g")
-                      .attr("transform", "translate(60,60) rotate(30)");
+                      .attr("transform", my_transform);
+       
        var rect = group.append("rect")
                         .attr("x",20)
                         .attr("y",20)
