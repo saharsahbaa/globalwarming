@@ -5,9 +5,12 @@
   </head>
   <body>
     <h3> A simple transition </h3>
-    <script> 
+    <script>
+      var t = d3.select("body")
+                .transition()
+                .duration(2000);
       d3.select("body")
-        .transition()
+        .transition(t)
         .style("background-color", "lightblue");
        </script>
   </body>
