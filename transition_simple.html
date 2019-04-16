@@ -6,11 +6,8 @@
   <body>
     <h3> A simple transition </h3>
     <script>
-      var t = d3.select("body")
-                .transition()
-                .duration(20);
       d3.select("body")
-        .transition(t)
+        .transition()
         .style("background-color", "lightgreen")
         .style("background-color", "lightblue");
        </script>
