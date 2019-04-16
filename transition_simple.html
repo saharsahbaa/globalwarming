@@ -6,9 +6,13 @@
   <body>
     <h3> A simple transition </h3>
     <script>
+      var t = d3.select("body")
+      .selectall("h3")
+      .transition()
+      .duration(5000);
       d3.select("body")
-        .transition()
-        .style("background-color", "red");
+        .transition(t)
+        .style("color", "rgb(0, 150, 120)");
     </script>
   </body>
 </html>
