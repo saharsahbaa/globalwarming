@@ -26,27 +26,27 @@
           radius = math.min(width, height)/2;
       var g = svg.append("g")
                  .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-      #now add the color
+      <!-- now add the color -->
       
       var color = d3.scaleOrdinal(['gray', 'green', 'brown', 'orange', 'yellow', 'red', 'purple']);
-      #generate a pie chart
+      <!-- generate a pie chart -->
       var pie = d3.pie()
                   .value(function (d) { return d.percent;});
       var path = d3.arc()
                   .outerRadius(radius - 10)
                   .innerRadius(0);
-      #Add label for weight
+      <!-- Add label for weight -->
       var lable = d3
                     .arc()
                     .outerRadius(radius)
                     .innerRadius(radius - 80);
-      #read data
+      <!-- read data -->
       d3.csv("population.csv", function(error, data){
         if (error) {
           throw error;
           }
          });
-        #load data
+        <!-- load data -->
         var arc = g.selectAll(".arc")
                     .data(pie(data))
                     .enter()
