@@ -57,9 +57,9 @@
             .attr("fill", function(d) { return color (d.data.states); });
          console.log(arc)
          
-        arc.append("text").attr("transform", function(d) { return "translate(" + lable.centroid(d) + ")";
-        })
-        .text(function(d) {return d.data.state; });
+        arc.append("text").attr("transform", function(d) { 
+                                                            return "translate(" + lable.centroid(d) + ")";})
+           .text(function(d) {return d.data.state; });
         });
         svg.append("g")
             .attr("transform", "translate(" + (width / 2 - 120) + "," + 20 + ")")
