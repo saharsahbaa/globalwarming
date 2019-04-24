@@ -4,8 +4,12 @@ body{
   background-color: blue;
 }
 
+.sphere{
+  fill: blue;
+}
 
-path{
+
+.country{
   fill: lightgreen;
   stroke: black;
   stroke-opacity: 0.2;
