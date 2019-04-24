@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<style>
-
-/* CSS goes here. */
-
-</style>
-<body>
-<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="//d3js.org/topojson.v1.min.js"></script>
-<script>
+<html>
+  <head>
+    <title> Let's make a map with d3.js! </title>
+  </head>
+  <link rel = "stylesheet"  href = "style.css" />
+  <script src = "https://d3.org/d3.v4.min.js" ></script>
   
-  d3.json("uk.json", function(error, uk) {
-  if (error) return console.error(error);
-  console.log(uk);
-});
+  <body>
+    <svg width = "960" height = "500" ></svg>
+  </body>
+</html>
 
-/* JavaScript goes here. */
-
-</script>
